@@ -21,7 +21,7 @@ public class Veiculo {
 
     @Override
     public String toString() {
-        return String.format("<Veículo: Marca = %s, Modelo = %s, Placa = %s, Ano = %s, Disponivel = %b, Preço = $.2f>"
+        return String.format("<Veículo: \nMarca = %s \nModelo = %s \nPlaca = %s \nAno = %s \nDisponivel = %b \nPreço = $.2f>"
                 , this.marca, this.modelo, this.placa, this.ano, this.disponivel, this.preco);
     }
 }
