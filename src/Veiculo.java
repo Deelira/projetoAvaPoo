@@ -24,4 +24,5 @@ public class Veiculo {
         return String.format("<Veículo: Marca = %s, Modelo = %s, Placa = %s, Ano = %s, Disponivel = %b, Preço = $.2f>"
                 , this.marca, this.modelo, this.placa, this.ano, this.disponivel, this.preco);
     }
+
 }
