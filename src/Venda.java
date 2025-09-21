@@ -1,4 +1,5 @@
 public class Venda {
+
     public Veiculo veiculo;
     public Cliente cliente;
     public String dataVenda;
@@ -6,6 +7,7 @@ public class Venda {
     public String formaPagamento;
 
     public Venda (Veiculo veiculo, Cliente cliente, String dataVenda, double valorVenda, String formaPagamento){
+
         this.veiculo = veiculo;
         this.cliente = cliente;
         this.dataVenda = dataVenda;
@@ -19,5 +21,6 @@ public class Venda {
             "<Venda: veiculo=%s, cliente=%s, dataVenda=%s, valorVenda=%s, formaPagamento=%s>",
             this.veiculo, this.cliente, this.dataVenda, this.valorVenda, this.formaPagamento
         );
+
     }
 }
