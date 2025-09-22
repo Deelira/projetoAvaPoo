@@ -10,6 +10,12 @@ public class Concessionaria {
     public int totalVendas;
 
     public void Concessionaria(String nome){
+        this.nome = nome;
+        this.veiculos = veiculos;
+        this.clientes = clientes;
+        this.vendas = vendas;
+        this.totalClientes = totalClientes;
+        this.totalVendas = totalVendas;
     }
 
     public boolean adicionarVeiculo(Veiculo veiculo){

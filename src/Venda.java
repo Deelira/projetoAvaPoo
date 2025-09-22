@@ -7,7 +7,6 @@ public class Venda {
     public String formaPagamento;
 
     public Venda (Veiculo veiculo, Cliente cliente, String dataVenda, double valorVenda, String formaPagamento){
-
         this.veiculo = veiculo;
         this.cliente = cliente;
         this.dataVenda = dataVenda;
