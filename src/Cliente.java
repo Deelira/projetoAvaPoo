@@ -14,6 +14,11 @@ public class Cliente {
 
     @Override
     public String toString(){
-        return String.format("<Pessoa: nome=%s>", this.nome);
+        return String.format("<Pessoa: " +
+                "\nNome = %s>" +
+                "\nId = %s" +
+                "\nTelefone = %s" +
+                "\nEmail = %s>",
+                this.nome, this.id, this.telefone, this.email);
     }
 }

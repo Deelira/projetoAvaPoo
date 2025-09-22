@@ -20,9 +20,13 @@ public class Venda {
 
     @Override
     public String toString(){
-        return String.format(
-            "<Venda: Veiculo = %s, Cliente = %s, Data = %s, Valor = %s, Pagamento = %s>",
-            this.veiculo, this.cliente, this.dataVenda, this.valorVenda, this.formaPagamento
+        return String.format("<Venda: " +
+                "\nVeiculo = %s" +
+                "\nCliente = %s" +
+                "\nData = %s" +
+                "\nValor = %s" +
+                "\nPagamento = %s>",
+                this.veiculo, this.cliente, this.dataVenda, this.valorVenda, this.formaPagamento
         );
 
     }

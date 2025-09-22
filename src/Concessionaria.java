@@ -99,7 +99,7 @@ public class Concessionaria {
         }
 
         if (veiculoSelecionado != null && clienteSelecionado != null) {
-            Venda venda = new Venda(veiculoSelecionado, clienteSelecionado, dataVenda, formaPagamento, valor);
+            Venda venda = new Venda(veiculoSelecionado, clienteSelecionado, dataVenda, formaPagamento, valor); /// Perguntar a JP sobre esta linha
             vendas.add(venda);
             veiculos.remove(veiculoSelecionado);
             totalVendas++;
@@ -108,6 +108,7 @@ public class Concessionaria {
         }
         return false;
     }
+
 
     public ArrayList<Veiculo> listarVeiculosDisponiveis() {
         return new ArrayList<>(veiculos);
