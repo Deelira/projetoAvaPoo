@@ -29,8 +29,8 @@ public class Concessionaria {
     public boolean removerVeiculo(Veiculo veiculo){
         for (int i = 0; i < totalVeiculos; i++){
             if (this.veiculos.get(i).placa.toLowerCase().equals(veiculo.placa.toLowerCase())){
-                Veiculo veiculoEcontrado = this.veiculos.get(i);
-                this.veiculos.remove(veiculoEcontrado);
+                Veiculo veiculoEncontrado = this.veiculos.get(i);
+                this.veiculos.remove(veiculoEncontrado);
                 this.totalVeiculos--;
                 return true;
             }
