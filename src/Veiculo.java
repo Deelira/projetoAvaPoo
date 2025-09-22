@@ -13,6 +13,7 @@ public class Veiculo {
         this.modelo = modelo;
         this.placa = placa;
         this.ano = ano;
+        this.preco = preco;
     }
 
     public void mudarDisponibilidade (boolean disponibilidade){
@@ -27,7 +28,7 @@ public class Veiculo {
                "\nPlaca = %s " +
                "\nAno = %s " +
                "\nDisponivel = %b " +
-               "\nPreço = $.2f>"
+               "\nPreço = R$%.2f>"
                 , this.marca, this.modelo, this.placa, this.ano, this.disponivel, this.preco);
     }
 }
