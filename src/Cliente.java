@@ -16,7 +16,7 @@ public class Cliente {
     public String toString(){
         return String.format("<Pessoa: " +
                 "\nNome = %s>" +
-                "\nId = %s" +
+                "\nId = %d" +
                 "\nTelefone = %s" +
                 "\nEmail = %s>",
                 this.nome, this.id, this.telefone, this.email);
