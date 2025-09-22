@@ -14,9 +14,6 @@ public class Venda {
         this.formaPagamento = formaPagamento;
     }
 
-    public Venda(Veiculo veiculoSelecionado, Cliente clienteSelecionado, String dataVenda, String formaPagamento, double valor) {
-    }
-
     @Override
     public String toString(){
         return String.format("<Venda: " +
