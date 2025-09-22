@@ -11,6 +11,9 @@ public class Concessionaria {
 
     public Concessionaria(String nome){
         this.nome = nome;
+        this.veiculos = new ArrayList<>();
+        this.clientes = new ArrayList<>();
+        this.vendas = new ArrayList<>();
     }
 
     public boolean adicionarVeiculo(Veiculo veiculo){
