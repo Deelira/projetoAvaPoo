@@ -9,7 +9,7 @@ public class Concessionaria {
     public int totalClientes;
     public int totalVendas;
 
-    public void Concessionaria(String nome){
+    public Concessionaria(String nome){
         this.nome = nome;
     }
 
