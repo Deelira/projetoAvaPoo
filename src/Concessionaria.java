@@ -14,20 +14,21 @@ public class Concessionaria {
     }
 
     public boolean adicionarVeiculo(Veiculo veiculo){
-        for (int i = 0; i < totalVeiculos; i++){
-            if (this.veiculos.get(i).placa.equals(veiculo.placa)){
+        for (int i = 0; i < totalVeiculos; i++) {
+            if (this.veiculos.get(i).placa.equals(veiculo.placa)) {
                 return false;
             }
-            boolean statusAdicionado = this.veiculos.add(veiculo);
-            this.totalVeiculos++;
-            return statusAdicionado;
         }
-        return false;
+        boolean statusAdicionado = this.veiculos.add(veiculo);
+        if (statusAdicionado){
+            this.totalVeiculos++;
+        }
+        return statusAdicionado;
     }
 
     public boolean removerVeiculo(Veiculo veiculo){
         for (int i = 0; i < totalVeiculos; i++){
-            if (this.veiculos.get(i).placa.equals(veiculo.placa)){
+            if (this.veiculos.get(i).placa.toLowerCase().equals(veiculo.placa.toLowerCase())){
                 Veiculo veiculoEcontrado = this.veiculos.get(i);
                 this.veiculos.remove(veiculoEcontrado);
                 this.totalVeiculos--;
@@ -40,7 +41,7 @@ public class Concessionaria {
     public ArrayList<Veiculo> buscarVeiculoPorMarca(String marca){
         ArrayList<Veiculo> veiculosEncontrados = new ArrayList<>();
         for (int i = 0; i < totalVeiculos; i++){
-            if (this.veiculos.get(i).marca.equals(marca)){
+            if (this.veiculos.get(i).marca.toLowerCase().equals(marca.toLowerCase())){
                 veiculosEncontrados.add(veiculos.get(i));
             }
         }
@@ -50,7 +51,7 @@ public class Concessionaria {
     public ArrayList<Veiculo> buscarVeiculoPorModelo(String modelo){
         ArrayList<Veiculo> veiculosEncontrados = new ArrayList<>();
         for (int i = 0; i < totalVeiculos; i++){
-            if (this.veiculos.get(i).modelo.equals(modelo)){
+            if (this.veiculos.get(i).modelo.toLowerCase().equals(modelo.toLowerCase())){
                 veiculosEncontrados.add(veiculos.get(i));
             }
         }
@@ -67,12 +68,14 @@ public class Concessionaria {
     }
 
     public boolean removerCliente(Cliente cliente){
-        for (int i = 0; i < totalClientes; i++){
-            if (this.clientes.get(i).id == cliente.id){
-                Cliente clienteEncontrado = this.clientes.get(i);
-                this.clientes.remove(clienteEncontrado);
-                this.totalClientes--;
-                return true;
+        if (cliente != null){
+            for (int i = 0; i < totalClientes; i++){
+                if (this.clientes.get(i).id == cliente.id){
+                    Cliente clienteEncontrado = this.clientes.get(i);
+                    this.clientes.remove(clienteEncontrado);
+                    this.totalClientes--;
+                    return true;
+                }
             }
         }
         return false;
