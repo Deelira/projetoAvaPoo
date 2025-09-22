@@ -103,7 +103,7 @@ public class Concessionaria {
         }
 
         if (veiculoSelecionado != null && clienteSelecionado != null) {
-            Venda venda = new Venda(veiculoSelecionado, clienteSelecionado, dataVenda, formaPagamento, valor); /// Perguntar a JP sobre esta linha
+            Venda venda = new Venda(veiculoSelecionado, clienteSelecionado, dataVenda, valor, formaPagamento); /// Perguntar a JP sobre esta linha
             vendas.add(venda);
             veiculos.remove(veiculoSelecionado);
             totalVendas++;
